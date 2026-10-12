@@ -54,7 +54,6 @@
 
 <br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=Ajayjassi&color=a78bfa&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views"/>
 
 <br/>
 
