@@ -8,13 +8,13 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
 .sgm{font-family:'SGM','Segoe UI',Helvetica,Arial,sans-serif;font-weight:500}
 .jb{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
 .jbb{font-family:'JBMB',ui-monospace,Menlo,Consolas,monospace;font-weight:700}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0}to{opacity:1}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
 @keyframes ring{0%{r:4;opacity:.8}100%{r:13;opacity:0}}
 .fu{animation:fadeUp .7s cubic-bezier(.2,.8,.2,1) both}
 .fi{animation:fadeIn .7s ease both}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important}}
+
 
 .swing{transform-box:view-box;transform-origin:212px -30px;animation:drop 2.6s cubic-bezier(.3,1,.5,1) forwards, sway 6s ease-in-out 2.6s infinite}
 @keyframes drop{0%{transform:translateY(-640px) rotate(0deg)}22%{transform:translateY(0) rotate(0deg)}42%{transform:rotate(3.4deg)}62%{transform:rotate(-2.2deg)}80%{transform:rotate(1.2deg)}100%{transform:rotate(0deg)}}
@@ -29,7 +29,7 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
 .sgm{font-family:'SGM','Segoe UI',Helvetica,Arial,sans-serif;font-weight:500}
 .jb{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
 .jbb{font-family:'JBMB',ui-monospace,Menlo,Consolas,monospace;font-weight:700}
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0}to{opacity:1}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .fu{animation:fadeUp .7s cubic-bezier(.2,.8,.2,1) both}
 .fi{animation:fadeIn .7s ease both}
@@ -47,6 +47,16 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
 .pbar1{animation:bar1 12s linear infinite}
 .pbar2{animation:bar2 12s linear infinite}
 .pbar3{animation:bar3 12s linear infinite}
+
+/* Keep positioned content intact and show one carousel item without motion. */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  .fu,.fi,.tile{opacity:1!important}
+  .role{opacity:0!important}
+  .role:first-child{opacity:1!important}
+  .slide1{opacity:1!important}
+  .slide2,.slide3{opacity:0!important}
+}
 </style>
 <linearGradient id="cardbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171a2c"/><stop offset="1" stop-color="#121423"/></linearGradient>
 <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a78bfa" stop-opacity=".5"/><stop offset=".5" stop-color="#262a42"/><stop offset="1" stop-color="#22d3ee" stop-opacity=".5"/></linearGradient>
@@ -84,7 +94,7 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
     <rect x="18" y="18" width="60" height="60" rx="12" fill="#082f49"/>
     <text x="36" y="56" font-size="24">🪐</text>
     <text class="sg" x="96" y="44" font-size="18" fill="#22d3ee">3D Graphics &amp; NASA Universe</text>
-    <text class="jb" x="96" y="68" font-size="12.5" fill="#8d93ab">Interactive Three.js, WebGL &amp; real-time space data telemetry.</text>
+    <text class="jb" x="96" y="68" font-size="12.5" fill="#8d93ab">Three.js, WebGL &amp; NASA data visualization.</text>
   </g>
 
   <!-- Capability Tile 2: Bioacoustics -->
@@ -93,7 +103,7 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
     <rect x="18" y="18" width="60" height="60" rx="12" fill="#2e1065"/>
     <text x="36" y="56" font-size="24">🦜</text>
     <text class="sg" x="96" y="44" font-size="18" fill="#a78bfa">Bioacoustics &amp; Machine Learning</text>
-    <text class="jb" x="96" y="68" font-size="12.5" fill="#8d93ab">Spectrogram analysis, Librosa DSP &amp; PyTorch neural models.</text>
+    <text class="jb" x="96" y="68" font-size="12.5" fill="#8d93ab">Spectrograms, Librosa DSP &amp; PyTorch models.</text>
   </g>
 
   <!-- Capability Tile 3: Full-Stack Systems -->
@@ -102,7 +112,7 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
     <rect x="18" y="18" width="60" height="60" rx="12" fill="#4c0519"/>
     <text x="36" y="56" font-size="24">⚡</text>
     <text class="sg" x="96" y="44" font-size="18" fill="#f472b6">Scalable Web &amp; Agentic Systems</text>
-    <text class="jb" x="96" y="68" font-size="12.5" fill="#8d93ab">Full-stack React, TypeScript, FastAPI, Python &amp; AI CLI tools.</text>
+    <text class="jb" x="96" y="68" font-size="12.5" fill="#8d93ab">React, TypeScript, FastAPI &amp; Python systems.</text>
   </g>
 
   <text class="jb" x="32" y="525" font-size="11" fill="#8d93ab" opacity=".75">built with precision &#183; clean code &#183; performance first</text>
@@ -129,7 +139,7 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
   <text class="sg" x="32" y="108" font-size="28" fill="#eceef6">Passions &amp; Explorations</text>
 
   <!-- Carousel Slide 1: Astronomy -->
-  <g class="slide1" transform="translate(32,135)">
+  <g transform="translate(32,135)"><g class="slide1">
     <rect width="506" height="240" rx="16" fill="#141727" stroke="#262a42"/>
     <text x="32" y="70" font-size="48">🔭</text>
     <text class="sg" x="110" y="60" font-size="24" fill="#22d3ee">Stargazing &amp; Astrophysics</text>
@@ -140,24 +150,24 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
     <text class="jb" x="48" y="215" font-size="11" fill="#38bdf8">#Astronomy</text>
     <rect x="162" y="196" width="120" height="28" rx="8" fill="#082f49"/>
     <text class="jb" x="178" y="215" font-size="11" fill="#38bdf8">#SpaceViz</text>
-  </g>
+  </g></g>
 
   <!-- Carousel Slide 2: Audio DSP -->
-  <g class="slide2" transform="translate(32,135)">
+  <g transform="translate(32,135)"><g class="slide2">
     <rect width="506" height="240" rx="16" fill="#141727" stroke="#262a42"/>
     <text x="32" y="70" font-size="48">🎧</text>
     <text class="sg" x="110" y="60" font-size="24" fill="#a78bfa">Audio Signal Synthesis</text>
     <text class="jb" x="110" y="90" font-size="14" fill="#eceef6">Acoustics &amp; Wildlife Soundscapes</text>
-    <text class="jb" x="32" y="150" font-size="13" fill="#8d93ab">Analyzing environmental bird vocalizations, Fourier transforms</text>
+    <text class="jb" x="32" y="150" font-size="13" fill="#8d93ab">Exploring bird vocalizations, Fourier transforms</text>
     <text class="jb" x="32" y="174" font-size="13" fill="#8d93ab">and building interactive audio-visual spectrograms.</text>
     <rect x="32" y="196" width="130" height="28" rx="8" fill="#2e1065"/>
     <text class="jb" x="46" y="215" font-size="11" fill="#c084fc">#Bioacoustics</text>
     <rect x="172" y="196" width="120" height="28" rx="8" fill="#2e1065"/>
     <text class="jb" x="190" y="215" font-size="11" fill="#c084fc">#AudioDSP</text>
-  </g>
+  </g></g>
 
   <!-- Carousel Slide 3: Hardware & 3D CAD -->
-  <g class="slide3" transform="translate(32,135)">
+  <g transform="translate(32,135)"><g class="slide3">
     <rect width="506" height="240" rx="16" fill="#141727" stroke="#262a42"/>
     <text x="32" y="70" font-size="48">🛠️</text>
     <text class="sg" x="110" y="60" font-size="24" fill="#f472b6">SolidWorks &amp; Robotics</text>
@@ -168,7 +178,7 @@ text{font-family:'JBM',ui-monospace,Menlo,Consolas,monospace}
     <text class="jb" x="46" y="215" font-size="11" fill="#fb7185">#SolidWorks</text>
     <rect x="162" y="196" width="120" height="28" rx="8" fill="#4c0519"/>
     <text class="jb" x="182" y="215" font-size="11" fill="#fb7185">#Robotics</text>
-  </g>
+  </g></g>
 
   <!-- Bottom: Daily Activity Rings Container -->
   <g transform="translate(32,410)">
