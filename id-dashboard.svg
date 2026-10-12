@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="id-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0c13"/>
+      <stop offset="100%" stop-color="#11131f"/>
+    </linearGradient>
+    <linearGradient id="id-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="hologram-sweep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="id-dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#383b54" fill-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Left: Swinging Holographic ID Card -->
+  <g transform="translate(140, 20)">
+    <!-- Pendulum Damped Swinging Motion -->
+    <animateTransform attributeName="transform" type="rotate" values="-3.5,0,0; 3.5,0,0; -2,0,0; 2,0,0; 0,0,0" dur="6s" repeatCount="indefinite"/>
+
+    <!-- Lanyard Strap with Printed Text -->
+    <rect x="-14" y="-30" width="28" height="65" fill="#181c2e" stroke="#333a59" stroke-width="1"/>
+    <text x="0" y="5" text-anchor="middle" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" transform="rotate(90,0,5)">
+      AJAY // 2026 // DEV
+    </text>
+
+    <!-- Metal Clasp -->
+    <rect x="-18" y="32" width="36" height="12" rx="3" fill="#64748b" stroke="#94a3b8" stroke-width="1"/>
+    <ellipse cx="0" cy="48" rx="8" ry="5" fill="none" stroke="#94a3b8" stroke-width="2.5"/>
+
+    <!-- The ID Badge Body -->
+    <g transform="translate(-110, 56)">
+      <!-- Badge Shadow & Frame -->
+      <rect x="0" y="0" width="220" height="270" rx="14" fill="#0d0f1a" stroke="url(#id-border)" stroke-width="1.5"/>
+
+      <!-- Holographic Foil Sweep -->
+      <rect x="0" y="0" width="220" height="270" rx="14" fill="url(#hologram-sweep)">
+        <animate attributeName="x" values="-220;220;-220" dur="5s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Badge Header Strap Hole -->
+      <rect x="85" y="8" width="50" height="6" rx="3" fill="#05060a"/>
+
+      <!-- Photo Frame with Border Light -->
+      <g transform="translate(25, 24)">
+        <rect x="0" y="0" width="80" height="85" rx="8" fill="#141829" stroke="#22d3ee" stroke-width="1.5"/>
+        <!-- Stylized Developer Silhouette -->
+        <circle cx="40" cy="35" r="18" fill="#38bdf8" fill-opacity="0.25"/>
+        <circle cx="40" cy="35" r="14" fill="#38bdf8"/>
+        <path d="M 18 75 C 18 55, 62 55, 62 75 Z" fill="#38bdf8"/>
+      </g>
+
+      <!-- Gold Microchip -->
+      <g transform="translate(125, 36)">
+        <rect x="0" y="0" width="42" height="34" rx="4" fill="#eab308" stroke="#ca8a04" stroke-width="1.2"/>
+        <line x1="14" y1="0" x2="14" y2="34" stroke="#a16207" stroke-width="1"/>
+        <line x1="28" y1="0" x2="28" y2="34" stroke="#a16207" stroke-width="1"/>
+        <line x1="0" y1="17" x2="42" y2="17" stroke="#a16207" stroke-width="1"/>
+      </g>
+
+      <!-- Name & Credentials -->
+      <text x="25" y="135" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" letter-spacing="-0.5">
+        AJAY JASSI
+      </text>
+      <text x="25" y="152" fill="#22d3ee" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" letter-spacing="0.5">
+        SPATIAL &amp; AI ARCHITECT
+      </text>
+
+      <!-- Details Table inside Badge -->
+      <g transform="translate(25, 168)">
+        <text x="0" y="0" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">ID NO:</text>
+        <text x="45" y="0" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9">90391361-AJ</text>
+
+        <text x="0" y="16" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">GITHUB:</text>
+        <text x="45" y="16" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="9">Ajayjassi</text>
+
+        <text x="0" y="32" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="9">STATUS:</text>
+        <text x="45" y="32" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="9">ACTIVE // VERIFIED</text>
+      </g>
+
+      <!-- Barcode at bottom -->
+      <g transform="translate(25, 222)">
+        <rect x="0" y="0" width="170" height="26" fill="#0f111d"/>
+        <g fill="#cbd5e1">
+          <rect x="6" y="3" width="3" height="20"/>
+          <rect x="12" y="3" width="2" height="20"/>
+          <rect x="17" y="3" width="5" height="20"/>
+          <rect x="25" y="3" width="2" height="20"/>
+          <rect x="30" y="3" width="4" height="20"/>
+          <rect x="38" y="3" width="2" height="20"/>
+          <rect x="44" y="3" width="6" height="20"/>
+          <rect x="54" y="3" width="2" height="20"/>
+          <rect x="60" y="3" width="4" height="20"/>
+          <rect x="68" y="3" width="2" height="20"/>
+          <rect x="74" y="3" width="5" height="20"/>
+          <rect x="83" y="3" width="2" height="20"/>
+          <rect x="90" y="3" width="4" height="20"/>
+          <rect x="98" y="3" width="6" height="20"/>
+          <rect x="108" y="3" width="2" height="20"/>
+          <rect x="114" y="3" width="4" height="20"/>
+          <rect x="122" y="3" width="2" height="20"/>
+          <rect x="128" y="3" width="5" height="20"/>
+          <rect x="137" y="3" width="3" height="20"/>
+          <rect x="144" y="3" width="2" height="20"/>
+          <rect x="150" y="3" width="6" height="20"/>
+          <rect x="160" y="3" width="2" height="20"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right: Live Dev Dashboard -->
+  <g transform="translate(290, 20)">
+    <rect x="0" y="0" width="540" height="325" rx="16" fill="url(#id-bg)"/>
+    <rect x="0" y="0" width="540" height="325" rx="16" fill="url(#id-dots)"/>
+    <rect x="0" y="0" width="540" height="325" rx="16" fill="none" stroke="url(#id-border)" stroke-width="1.2"/>
+
+    <!-- Dashboard Header -->
+    <text x="24" y="32" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="700">
+      Engineering Metrics &amp; Repositories
+    </text>
+
+    <!-- Top KPI Tiles -->
+    <g transform="translate(24, 48)">
+      <!-- Tile 1 -->
+      <rect x="0" y="0" width="112" height="58" rx="8" fill="#131627" stroke="#232742" stroke-width="1"/>
+      <text x="14" y="24" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">PUBLIC REPOS</text>
+      <text x="14" y="47" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700">4+</text>
+
+      <!-- Tile 2 -->
+      <rect x="126" y="0" width="112" height="58" rx="8" fill="#131627" stroke="#232742" stroke-width="1"/>
+      <text x="14" y="24" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">CONTRIBUTIONS</text>
+      <text x="14" y="47" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700">100%</text>
+
+      <!-- Tile 3 -->
+      <rect x="252" y="0" width="112" height="58" rx="8" fill="#131627" stroke="#232742" stroke-width="1"/>
+      <text x="14" y="24" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">EXP YRS</text>
+      <text x="14" y="47" fill="#f472b6" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700">3+</text>
+
+      <!-- Tile 4 -->
+      <rect x="378" y="0" width="112" height="58" rx="8" fill="#131627" stroke="#232742" stroke-width="1"/>
+      <text x="14" y="24" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">CODE UPTIME</text>
+      <text x="14" y="47" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700">99.9%</text>
+    </g>
+
+    <!-- Mid Section: Top Repos Bar Chart -->
+    <g transform="translate(24, 122)">
+      <text x="0" y="12" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">
+        CORE REPOSITORIES &amp; COMPLEXITY
+      </text>
+
+      <!-- Bar 1: 3D Universe -->
+      <g transform="translate(0, 24)">
+        <text x="0" y="14" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Interactive 3D Universe (NASA)</text>
+        <rect x="210" y="2" width="240" height="15" rx="4" fill="#1e293b"/>
+        <rect x="210" y="2" width="0" height="15" rx="4" fill="#38bdf8">
+          <animate attributeName="width" values="0;235" dur="1.2s" fill="freeze"/>
+        </rect>
+        <text x="455" y="14" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">98%</text>
+      </g>
+
+      <!-- Bar 2: Bioacoustic Bird Reader -->
+      <g transform="translate(0, 48)">
+        <text x="0" y="14" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">bioacoustic-bird-reader</text>
+        <rect x="210" y="2" width="240" height="15" rx="4" fill="#1e293b"/>
+        <rect x="210" y="2" width="0" height="15" rx="4" fill="#a78bfa">
+          <animate attributeName="width" values="0;210" dur="1.4s" fill="freeze"/>
+        </rect>
+        <text x="455" y="14" fill="#a78bfa" font-family="'JetBrains Mono', monospace" font-size="11">88%</text>
+      </g>
+
+      <!-- Bar 3: Aaryan's World -->
+      <g transform="translate(0, 72)">
+        <text x="0" y="14" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">aaryans-world (Spatial Simulation)</text>
+        <rect x="210" y="2" width="240" height="15" rx="4" fill="#1e293b"/>
+        <rect x="210" y="2" width="0" height="15" rx="4" fill="#f472b6">
+          <animate attributeName="width" values="0;180" dur="1.6s" fill="freeze"/>
+        </rect>
+        <text x="455" y="14" fill="#f472b6" font-family="'JetBrains Mono', monospace" font-size="11">76%</text>
+      </g>
+    </g>
+
+    <!-- Bottom Section: "NOW" Active Live Panel -->
+    <g transform="translate(24, 240)">
+      <rect x="0" y="0" width="490" height="64" rx="10" fill="#101322" stroke="#252b47" stroke-width="1"/>
+      <circle cx="20" cy="32" r="5" fill="#10b981">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="36" y="26" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">NOW ACTIVE:</text>
+      <text x="36" y="46" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">
+        Building autonomous AI coding agents, 3D spatial WebGL interfaces &amp; bioacoustic telemetry.
+      </text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="about-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0c13"/>
+      <stop offset="100%" stop-color="#11131f"/>
+    </linearGradient>
+    <linearGradient id="about-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0.8"/>
+    </linearGradient>
+    <pattern id="about-dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#383b54" fill-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Left Card: What I Build (Fake Browser) -->
+  <g transform="translate(0, 0)">
+    <rect x="2" y="2" width="416" height="316" rx="16" fill="url(#about-bg)"/>
+    <rect x="2" y="2" width="416" height="316" rx="16" fill="url(#about-dots)"/>
+    <rect x="2" y="2" width="416" height="316" rx="16" fill="none" stroke="url(#about-border)" stroke-width="1.2"/>
+
+    <!-- Browser Header -->
+    <rect x="2" y="2" width="416" height="42" rx="16" fill="#131522"/>
+    <circle cx="22" cy="22" r="5" fill="#ef4444"/>
+    <circle cx="38" cy="22" r="5" fill="#f59e0b"/>
+    <circle cx="54" cy="22" r="5" fill="#10b981"/>
+
+    <!-- Browser URL Bar -->
+    <rect x="75" y="10" width="320" height="24" rx="6" fill="#090a12" stroke="#252a42" stroke-width="1"/>
+    <text x="88" y="26" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">https://ajayjassi.dev/capabilities</text>
+    <line x1="330" y1="14" x2="330" y2="30" stroke="#22d3ee" stroke-width="1.5">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Card Title -->
+    <text x="24" y="78" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="700">
+      What I Build &amp; Architect
+    </text>
+
+    <!-- Capability Row 1 -->
+    <g transform="translate(24, 98)">
+      <rect x="0" y="0" width="370" height="54" rx="10" fill="#141727" stroke="#232742" stroke-width="1"/>
+      <rect x="10" y="10" width="34" height="34" rx="8" fill="#082f49"/>
+      <text x="20" y="32" font-size="16">🌌</text>
+      <text x="56" y="24" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">3D Graphics &amp; Universe Visuals</text>
+      <text x="56" y="40" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Interactive NASA datasets, Three.js &amp; WebGL</text>
+    </g>
+
+    <!-- Capability Row 2 -->
+    <g transform="translate(24, 162)">
+      <rect x="0" y="0" width="370" height="54" rx="10" fill="#141727" stroke="#232742" stroke-width="1"/>
+      <rect x="10" y="10" width="34" height="34" rx="8" fill="#2e1065"/>
+      <text x="20" y="32" font-size="16">🧠</text>
+      <text x="56" y="24" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Bioacoustics &amp; Machine Learning</text>
+      <text x="56" y="40" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Audio signal processing &amp; neural classification</text>
+    </g>
+
+    <!-- Capability Row 3 -->
+    <g transform="translate(24, 226)">
+      <rect x="0" y="0" width="370" height="54" rx="10" fill="#141727" stroke="#232742" stroke-width="1"/>
+      <rect x="10" y="10" width="34" height="34" rx="8" fill="#4c0519"/>
+      <text x="20" y="32" font-size="16">⚡</text>
+      <text x="56" y="24" fill="#f472b6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Full-Stack &amp; Scalable Systems</text>
+      <text x="56" y="40" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">TypeScript, Python, cloud pipelines &amp; devtools</text>
+    </g>
+  </g>
+
+  <!-- Right Card: Hobbies Carousel -->
+  <g transform="translate(430, 0)">
+    <rect x="2" y="2" width="416" height="316" rx="16" fill="url(#about-bg)"/>
+    <rect x="2" y="2" width="416" height="316" rx="16" fill="url(#about-dots)"/>
+    <rect x="2" y="2" width="416" height="316" rx="16" fill="none" stroke="url(#about-border)" stroke-width="1.2"/>
+
+    <!-- Instagram-Style Story Progress Bars (12s loop) -->
+    <g transform="translate(24, 18)">
+      <!-- Bar 1 -->
+      <rect x="0" y="0" width="115" height="3.5" rx="1.75" fill="#334155"/>
+      <rect x="0" y="0" width="0" height="3.5" rx="1.75" fill="#22d3ee">
+        <animate attributeName="width" values="0;115;115;0" dur="12s" repeatCount="indefinite" keyTimes="0;0.33;0.99;1"/>
+      </rect>
+
+      <!-- Bar 2 -->
+      <rect x="125" y="0" width="115" height="3.5" rx="1.75" fill="#334155"/>
+      <rect x="125" y="0" width="0" height="3.5" rx="1.75" fill="#a78bfa">
+        <animate attributeName="width" values="0;0;115;115;0" dur="12s" repeatCount="indefinite" keyTimes="0;0.33;0.66;0.99;1"/>
+      </rect>
+
+      <!-- Bar 3 -->
+      <rect x="250" y="0" width="115" height="3.5" rx="1.75" fill="#334155"/>
+      <rect x="250" y="0" width="0" height="3.5" rx="1.75" fill="#f472b6">
+        <animate attributeName="width" values="0;0;115;115;0" dur="12s" repeatCount="indefinite" keyTimes="0;0.66;0.99;0.99;1"/>
+      </rect>
+    </g>
+
+    <!-- Carousel Header -->
+    <text x="24" y="52" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="700">
+      Hobbies &amp; Explorations
+    </text>
+
+    <!-- Slide 1: Cosmos & Stargazing (0s - 4s) -->
+    <g transform="translate(24, 75)">
+      <animate attributeName="opacity" values="1;1;0;0;1" dur="12s" repeatCount="indefinite" keyTimes="0;0.31;0.34;0.97;1"/>
+      <rect x="0" y="0" width="370" height="120" rx="12" fill="#131627" stroke="#252a46" stroke-width="1"/>
+      <text x="20" y="44" font-size="34">🪐</text>
+      <text x="72" y="38" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700">Astronomy &amp; Astrophysics</text>
+      <text x="72" y="62" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5">Simulating planetary mechanics, NASA telemetry,</text>
+      <text x="72" y="80" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5">and deep-sky orbital visualization.</text>
+    </g>
+
+    <!-- Slide 2: Audio Engineering & Bioacoustics (4s - 8s) -->
+    <g transform="translate(24, 75)" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" dur="12s" repeatCount="indefinite" keyTimes="0;0.33;0.36;0.64;0.67;1"/>
+      <rect x="0" y="0" width="370" height="120" rx="12" fill="#131627" stroke="#252a46" stroke-width="1"/>
+      <text x="20" y="44" font-size="34">🎧</text>
+      <text x="72" y="38" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700">Acoustic Signal Processing</text>
+      <text x="72" y="62" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5">Birdsong spectrograms, environmental audio,</text>
+      <text x="72" y="80" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5">and modular sound architecture.</text>
+    </g>
+
+    <!-- Slide 3: Robotics & Open Source (8s - 12s) -->
+    <g transform="translate(24, 75)" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" dur="12s" repeatCount="indefinite" keyTimes="0;0.66;0.69;0.97;1"/>
+      <rect x="0" y="0" width="370" height="120" rx="12" fill="#131627" stroke="#252a46" stroke-width="1"/>
+      <text x="20" y="44" font-size="34">🛠️</text>
+      <text x="72" y="38" fill="#f472b6" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700">Open-Source &amp; CAD Design</text>
+      <text x="72" y="62" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5">SolidWorks 3D modelling, robotics firmware,</text>
+      <text x="72" y="80" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5">and agentic workflow tooling.</text>
+    </g>
+
+    <!-- Bottom Daily Activity Rings (Apple Fitness Style) -->
+    <g transform="translate(24, 215)">
+      <text x="0" y="30" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Daily Drive</text>
+      <text x="0" y="50" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="11">Code • Learn • Build</text>
+
+      <!-- Rings Container -->
+      <g transform="translate(300, 42)">
+        <!-- Outer Ring: Code (Cyan) -->
+        <circle cx="0" cy="0" r="32" fill="none" stroke="#1e293b" stroke-width="5.5"/>
+        <circle cx="0" cy="0" r="32" fill="none" stroke="#22d3ee" stroke-width="5.5" stroke-linecap="round" stroke-dasharray="201" stroke-dashoffset="35" transform="rotate(-90)">
+          <animate attributeName="stroke-dashoffset" values="201;35" dur="2s" fill="freeze"/>
+        </circle>
+
+        <!-- Middle Ring: Learn (Violet) -->
+        <circle cx="0" cy="0" r="23" fill="none" stroke="#1e293b" stroke-width="5.5"/>
+        <circle cx="0" cy="0" r="23" fill="none" stroke="#a78bfa" stroke-width="5.5" stroke-linecap="round" stroke-dasharray="144" stroke-dashoffset="25" transform="rotate(-90)">
+          <animate attributeName="stroke-dashoffset" values="144;25" dur="2.3s" fill="freeze"/>
+        </circle>
+
+        <!-- Inner Ring: Build (Pink) -->
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#1e293b" stroke-width="5.5"/>
+        <circle cx="0" cy="0" r="14" fill="none" stroke="#f472b6" stroke-width="5.5" stroke-linecap="round" stroke-dasharray="88" stroke-dashoffset="15" transform="rotate(-90)">
+          <animate attributeName="stroke-dashoffset" values="88;15" dur="2.6s" fill="freeze"/>
+        </circle>
+      </g>
+    </g>
+  </g>
+</svg>

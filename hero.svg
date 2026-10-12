@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0c13"/>
+      <stop offset="50%" stop-color="#0d0e16"/>
+      <stop offset="100%" stop-color="#121320"/>
+    </linearGradient>
+    <linearGradient id="hero-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="hero-text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee">
+        <animate attributeName="stop-color" values="#22d3ee;#a78bfa;#f472b6;#22d3ee" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#a78bfa">
+        <animate attributeName="stop-color" values="#a78bfa;#f472b6;#22d3ee;#a78bfa" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#f472b6">
+        <animate attributeName="stop-color" values="#f472b6;#22d3ee;#a78bfa;#f472b6" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <pattern id="hero-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#383b54" fill-opacity="0.35"/>
+    </pattern>
+    <filter id="hero-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes hero-pulse { 0%, 100% { opacity: 0.3; transform: scale(0.98); } 50% { opacity: 0.8; transform: scale(1.02); } }
+    @keyframes hero-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes hero-scanline { 0% { transform: translateY(-10px); } 100% { transform: translateY(220px); } }
+    .rec-dot { animation: hero-blink 1.2s infinite; }
+    .scan-line { animation: hero-scanline 3s linear infinite; }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="2" y="2" width="846" height="376" rx="20" fill="url(#hero-bg)"/>
+  <rect x="2" y="2" width="846" height="376" rx="20" fill="url(#hero-dots)"/>
+  <rect x="2" y="2" width="846" height="376" rx="20" fill="none" stroke="url(#hero-border)" stroke-width="1.5"/>
+
+  <!-- Top Ambient Glow -->
+  <circle cx="200" cy="40" r="120" fill="#22d3ee" fill-opacity="0.08" filter="url(#hero-glow)"/>
+  <circle cx="680" cy="180" r="140" fill="#a78bfa" fill-opacity="0.09" filter="url(#hero-glow)"/>
+
+  <!-- Left Content -->
+  <!-- Collab Pill -->
+  <g transform="translate(40, 36)">
+    <rect x="0" y="0" width="180" height="30" rx="15" fill="#141724" stroke="#22d3ee" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="16" cy="15" r="5" fill="#10b981">
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="28" y="20" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">OPEN TO COLLABS</text>
+  </g>
+
+  <!-- Greeting -->
+  <text x="40" y="105" fill="#94a3b8" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="18" font-weight="500">
+    Hi there, I'm
+  </text>
+
+  <!-- Big Name with Animated Aurora Gradient -->
+  <text x="40" y="165" fill="url(#hero-text-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="800" letter-spacing="-1">
+    Ajay Jassi
+  </text>
+
+  <!-- Cycling Role Titles -->
+  <g transform="translate(40, 205)">
+    <text fill="#38bdf8" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="18" font-weight="600">
+      &gt; <tspan id="role-text">Creative Technologist &amp; Spatial Builder</tspan>
+      <animate attributeName="opacity" values="0;1;1;0;0" dur="9s" repeatCount="indefinite" keyTimes="0;0.05;0.28;0.33;1"/>
+    </text>
+    <text fill="#c084fc" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="18" font-weight="600" opacity="0">
+      &gt; Full-Stack &amp; Applied AI Engineer
+      <animate attributeName="opacity" values="0;0;1;1;0;0" dur="9s" repeatCount="indefinite" keyTimes="0;0.33;0.38;0.61;0.66;1"/>
+    </text>
+    <text fill="#f472b6" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="18" font-weight="600" opacity="0">
+      &gt; Interactive 3D &amp; Web Architect
+      <animate attributeName="opacity" values="0;0;1;1;0;0" dur="9s" repeatCount="indefinite" keyTimes="0;0.66;0.71;0.95;0.99;1"/>
+    </text>
+  </g>
+
+  <!-- Pitch Statement -->
+  <text x="40" y="248" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="400">
+    Crafting intelligent spatial experiences, interactive 3D simulations &amp; modern web systems.
+  </text>
+
+  <!-- Meta Badges Row -->
+  <g transform="translate(40, 285)">
+    <!-- Location Badge -->
+    <rect x="0" y="0" width="125" height="34" rx="8" fill="#151728" stroke="#334155" stroke-width="1"/>
+    <text x="12" y="22" font-size="14">📍</text>
+    <text x="32" y="21" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="500">Canada</text>
+
+    <!-- GitHub Badge -->
+    <g transform="translate(135, 0)">
+      <rect x="0" y="0" width="135" height="34" rx="8" fill="#151728" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="22" font-size="14">🐙</text>
+      <text x="32" y="21" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="500">@Ajayjassi</text>
+    </g>
+
+    <!-- Focus Badge -->
+    <g transform="translate(280, 0)">
+      <rect x="0" y="0" width="180" height="34" rx="8" fill="#151728" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="22" font-size="14">⚡</text>
+      <text x="32" y="21" fill="#cbd5e1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="500">3D • Bioacoustics • AI</text>
+    </g>
+  </g>
+
+  <!-- Right Viewfinder Terminal (Video Camera Look) -->
+  <g transform="translate(520, 40)">
+    <!-- Viewfinder Screen Container -->
+    <rect x="0" y="0" width="290" height="295" rx="14" fill="#08090f" stroke="#1e2238" stroke-width="1.5"/>
+
+    <!-- Dynamic Scanning Grid Inside Viewfinder -->
+    <g opacity="0.35">
+      <line x1="30" y1="0" x2="30" y2="295" stroke="#22d3ee" stroke-width="0.5" stroke-dasharray="3,3"/>
+      <line x1="145" y1="0" x2="145" y2="295" stroke="#22d3ee" stroke-width="0.5" stroke-dasharray="3,3"/>
+      <line x1="260" y1="0" x2="260" y2="295" stroke="#22d3ee" stroke-width="0.5" stroke-dasharray="3,3"/>
+      <line x1="0" y1="75" x2="290" y2="75" stroke="#22d3ee" stroke-width="0.5" stroke-dasharray="3,3"/>
+      <line x1="0" y1="150" x2="290" y2="150" stroke="#22d3ee" stroke-width="0.5" stroke-dasharray="3,3"/>
+      <line x1="0" y1="225" x2="290" y2="225" stroke="#22d3ee" stroke-width="0.5" stroke-dasharray="3,3"/>
+    </g>
+
+    <!-- Holographic Avatar Silhouette & Core -->
+    <g transform="translate(145, 145)">
+      <!-- Outer Orbit Rings -->
+      <circle cx="0" cy="0" r="75" fill="none" stroke="#22d3ee" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="8,4">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="55" fill="none" stroke="#a78bfa" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="6,6">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="15s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="38" fill="#13162b" stroke="#f472b6" stroke-opacity="0.5" stroke-width="2"/>
+      
+      <!-- Center Hologram Icon (Developer / Atom / 3D Geometry) -->
+      <polygon points="0,-22 19,-11 19,11 0,22 -19,11 -19,-11" fill="none" stroke="url(#hero-text-grad)" stroke-width="2">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+      </polygon>
+      <circle cx="0" cy="0" r="6" fill="#22d3ee">
+        <animate attributeName="r" values="5;7;5" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Scanline effect -->
+    <line x1="10" y1="0" x2="280" y2="0" stroke="#22d3ee" stroke-opacity="0.4" stroke-width="2" class="scan-line"/>
+
+    <!-- Viewfinder Corner Brackets -->
+    <!-- Top-Left -->
+    <path d="M 16 32 L 16 16 L 32 16" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Top-Right -->
+    <path d="M 258 16 L 274 16 L 274 32" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Bottom-Left -->
+    <path d="M 16 262 L 16 278 L 32 278" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Bottom-Right -->
+    <path d="M 258 278 L 274 278 L 274 262" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Center Reticle / Crosshair -->
+    <line x1="135" y1="145" x2="155" y2="145" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.7"/>
+    <line x1="145" y1="135" x2="145" y2="155" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.7"/>
+
+    <!-- Top Status Bar: REC & Filename -->
+    <g transform="translate(18, 30)">
+      <circle cx="6" cy="0" r="4.5" fill="#ef4444" class="rec-dot"/>
+      <text x="16" y="4" fill="#f87171" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" letter-spacing="1">REC</text>
+      <text x="145" y="4" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500">RAW_CAM_01.MP4</text>
+    </g>
+
+    <!-- Bottom Scrubber & FPS Bar -->
+    <g transform="translate(18, 266)">
+      <!-- Scrubber track -->
+      <rect x="0" y="0" width="254" height="4" rx="2" fill="#1e293b"/>
+      <!-- Animated Scrubber Head -->
+      <rect x="0" y="0" width="30" height="4" rx="2" fill="#22d3ee">
+        <animate attributeName="x" values="0;224;0" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Timecode & Specs -->
+      <text x="0" y="-8" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9.5">4K // 60 FPS</text>
+      <text x="210" y="-8" fill="#22d3ee" font-family="'JetBrains Mono', monospace" font-size="9.5">LIVE</text>
+    </g>
+  </g>
+</svg>
